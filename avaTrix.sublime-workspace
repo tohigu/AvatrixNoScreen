@@ -1,0 +1,1085 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"gsr",
+				"gsrRawBuffer"
+			],
+			[
+				"pln",
+				"println	println text"
+			],
+			[
+				"B",
+				"BattleSystem"
+			],
+			[
+				"ad",
+				"add"
+			],
+			[
+				"pla",
+				"playerIndex"
+			],
+			[
+				"trigger",
+				"triggerSkillE"
+			],
+			[
+				"batt",
+				"battleResult"
+			],
+			[
+				"BATT",
+				"BATTLE_RESULT"
+			],
+			[
+				"BAT",
+				"BATTLE_RESULT"
+			],
+			[
+				"atta",
+				"attackerP1"
+			],
+			[
+				"off",
+				"offsetX"
+			],
+			[
+				"plaeyr",
+				"players"
+			],
+			[
+				"displa",
+				"displayEffects"
+			],
+			[
+				"for",
+				"for	for"
+			],
+			[
+				"new",
+				"newGame"
+			],
+			[
+				"BIG_",
+				"BIG_FONT_SIZE"
+			],
+			[
+				"BIG",
+				"BIG_FONT_SIZE"
+			],
+			[
+				"timer",
+				"timerSize"
+			],
+			[
+				"timera",
+				"timerAni"
+			],
+			[
+				"swit",
+				"switchPlayers"
+			],
+			[
+				"PRE",
+				"PRE_SKILLTEST"
+			],
+			[
+				"con",
+				"textConsole"
+			],
+			[
+				"start",
+				"startBattle"
+			],
+			[
+				"fade",
+				"fadeInWpSel"
+			],
+			[
+				"ani",
+				"sceneAni"
+			],
+			[
+				"hit",
+				"hitSound"
+			],
+			[
+				"gameOver",
+				"gameOverText"
+			],
+			[
+				"game",
+				"gameOverText"
+			],
+			[
+				"gameo",
+				"gameOverText"
+			],
+			[
+				"skill",
+				"skillTestValue"
+			],
+			[
+				"getS",
+				"getSkillFloat"
+			],
+			[
+				"P",
+				"PGraphics"
+			],
+			[
+				"HEA",
+				"HEALTHBAR_WIDTH"
+			],
+			[
+				"SKI",
+				"SKILLTEST"
+			],
+			[
+				"PR",
+				"PRE_SKILLTEST"
+			],
+			[
+				"wea",
+				"weaponSelect"
+			],
+			[
+				"SKILLTEST",
+				"SKILLTEST_INTRO"
+			],
+			[
+				"Basic",
+				"BasicWeapon"
+			],
+			[
+				"out",
+				"outputBlob"
+			],
+			[
+				"Bas",
+				"BasicWeapon"
+			],
+			[
+				"LED",
+				"gauntletLEDNum"
+			],
+			[
+				"gauntl",
+				"gauntletLEDNum"
+			],
+			[
+				"round",
+				"roundEndsGame"
+			],
+			[
+				"switc",
+				"switchPlayers"
+			],
+			[
+				"Sk",
+				"SKILL_STATE"
+			],
+			[
+				"pixe",
+				"pixelsRGB"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "BattleSystemConstants.pde",
+			"settings":
+			{
+				"buffer_size": 6130,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "avaTrix_noScreen.pde",
+			"settings":
+			{
+				"buffer_size": 2993,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "OSCView.pde",
+			"settings":
+			{
+				"buffer_size": 8451,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "OSCLED.pde",
+			"settings":
+			{
+				"buffer_size": 14344,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Player.pde",
+			"settings":
+			{
+				"buffer_size": 7892,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Weapon.pde",
+			"settings":
+			{
+				"buffer_size": 6360,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "BattleSystem.pde",
+			"settings":
+			{
+				"buffer_size": 16832,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Processing/Build Systems/Processing.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					""
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Re-run sketch"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Run sketch (Processing 3 only)"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Run sketch fullscreen"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Export sketch as application"
+				]
+			],
+			[
+				"Packages/Processing/Build Systems/Processing.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "insta",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"format",
+				"SublimeAStyleFormatter: Format Current File"
+			],
+			[
+				"align",
+				"AlignTab"
+			],
+			[
+				"schem",
+				"Schemr: List all schemes"
+			],
+			[
+				"themr",
+				"Themr: List themes"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"them",
+				"Themr: List themes"
+			],
+			[
+				"forma",
+				"SublimeAStyleFormatter: Format Current File"
+			],
+			[
+				"colorsub",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"theme",
+				"Themr: Next theme"
+			],
+			[
+				"color",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"th",
+				"SublimeLinter: Choose Gutter Theme"
+			],
+			[
+				"intall",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"git ini",
+				"Git: Init"
+			],
+			[
+				"alig",
+				"AlignTab"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 511.0
+	},
+	"console":
+	{
+		"height": 229.0,
+		"history":
+		[
+			"git clone git@github.com:shagabutdinov/sublime-align-cursors.git AlignCursors;",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/mnt/data/data/projects/avaTrix_noScreen"
+	],
+	"file_history":
+	[
+		"/mnt/data/data/projects/avaTrix_noScreen/BattleSystem.pde",
+		"/mnt/data/data/projects/avaTrix_noScreen/### [2016/7/12 11",
+		"/mnt/data/data/projects/avaTrix_noScreen/avaTrix_noScreen.pde",
+		"/mnt/data/data/projects/avaTrix_noScreen/	at processing.core.PApplet$2.run(PApplet.java",
+		"/mnt/data/data/projects/avaTrix_noScreen/	at processing.core.PApplet.method(PApplet.java",
+		"/mnt/data/data/projects/avaTrix_noScreen/	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java",
+		"/mnt/data/data/projects/avaTrix_noScreen/	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java",
+		"/mnt/data/data/projects/avaTrix_noScreen/	at avaTrix_noScreen.runLED(avaTrix_noScreen.java",
+		"/mnt/data/data/projects/avaTrix_noScreen/	at avaTrix_noScreen$OSCView.display(avaTrix_noScreen.java",
+		"/home/tohigu/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/mnt/data/data/projects/avaTrix_noScreen/Controller.pde",
+		"/mnt/data/data/projects/avaTrix_noScreen/GUIView.pde",
+		"/mnt/data/data/projects/avaTrix_noScreen/avaTrix.pde",
+		"/mnt/data/data/projects/avaTrix_noScreen/Xosc.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/avaTrix/BattleSystemConstants.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/avaTrix/avaTrix.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/avaTrix/BattleSystem.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/avaTrix/OSCView.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/avaTrix/OSCLED.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/avaTrix/GUIView.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/avaTrix/SoundPlayer.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/avaTrix/Player.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/avaTrix/Weapon.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/mount-amanita/Assets/Scripts/MuseInterface.cs",
+		"/run/user/1000/gvfs/smb-share:server=raspberrypi,share=raspi/index.js",
+		"/home/tohigu/Unity_OSC/Scripts/GameController.cs",
+		"/mnt/0828599B4A1AFB83/data/projects/avaTrix/	at avaTrix$knight.doPattern(avaTrix.java",
+		"/mnt/0828599B4A1AFB83/data/projects/Shoal/calibration/TAG/KinectCalibration (2).xml",
+		"/mnt/0828599B4A1AFB83/data/software/sketchbook/libraries/KinectProjectorToolkit/examples/CALIBRATION/data/calibration.txt",
+		"/mnt/0828599B4A1AFB83/data/projects/Shoal/calibration/TAG/KinectCalibration.xml",
+		"/mnt/0828599B4A1AFB83/data/software/sketchbook/libraries/KinectProjectorToolkit/examples/CALIBRATION/data/KinectCalibration.xml",
+		"/mnt/0828599B4A1AFB83/data/projects/avaTrix/[cmd",
+		"/mnt/0828599B4A1AFB83/data/projects/avaTrix/BasicView.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/avaTrix/Listening for transport dt_socket at address",
+		"/home/tohigu/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/mnt/0828599B4A1AFB83/data/projects/sublime/avaTrix.sublime-project",
+		"/mnt/0828599B4A1AFB83/data/projects/OSCTest/XOSCNeoPixel/XOSCNeoPixel.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/OSCTest/XOSCNeoPixel/GauntletTest.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/sublime/Controller.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/sublime/SuperPower.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/sublime/GUIView.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/sublime/BattleSystem.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/sublime/SkillTest.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/sublime/Xosc.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/sublime/Weapon.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/sublime/avaTrix.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/sublime/Player.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/sublime/BattleSystemConstants.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/sublime/BasicView.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/avaTrix/ myMessage",
+		"/mnt/0828599B4A1AFB83/data/projects/avaTrix/method in charge ",
+		"/mnt/0828599B4A1AFB83/data/projects/avaTrix/### [2015/11/16 15",
+		"/home/tohigu/Downloads/replicatorg-0040/readme.txt",
+		"/mnt/0828599B4A1AFB83/data/projects/OSCTest/XOSCNeoPixel/### [2015/10/13 16",
+		"/mnt/0828599B4A1AFB83/data/projects/OSCTest/XOSCNeoPixel/### [2015/10/13 15",
+		"/home/tohigu/.config/sublime-text-3/Packages/SublimeCodeIntel/README.rst",
+		"/home/tohigu/.config/sublime-text-3/Packages/SublimeCodeIntel/libs/zope/cachedescriptors/README.txt",
+		"/home/tohigu/customization/nomouseaccel.sh",
+		"/mnt/0828599B4A1AFB83/data/projects/avaTrix/avaTrix.sublime-project",
+		"/mnt/0828599B4A1AFB83/data/projects/avaTrix/BattleSystem.sublime-workspace",
+		"/mnt/0828599B4A1AFB83/data/projects/avaTrix/BattleSystem.sublime-project",
+		"/mnt/0828599B4A1AFB83/data/projects/BattleSystem/SkillTest.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/BattleSystem/BattleSystem.pde",
+		"/mnt/0828599B4A1AFB83/data/projects/BattleSystem/avaTrix.pde",
+		"/home/tohigu/.profile",
+		"/D/VirtualBox VMs/Ubuntu-12.04/Logs/VBoxStartup.log",
+		"/D/data/projects/BattleSystem/BattleSystem.pde",
+		"/D/data/projects/BattleSystem/SkillTest.pde",
+		"/D/data/projects/BattleSystem/BattleSystemConstants.pde",
+		"/D/data/projects/BattleSystem/Xosc.pde",
+		"/D/data/projects/BattleSystem/OSCTest.pde",
+		"/C/Users/My/Downloads/Flaty/Flaty/Theme/Flaty.theme",
+		"/C/Windows/Resources/Themes/Flaty.theme",
+		"/C/Users/My/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/My/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/D/data/projects/Avatrix_BattleSystem/battleSystem.pde"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"pattern",
+			"battle()",
+			"max",
+			"println",
+			"inputosc",
+			"osc",
+			"setIp",
+			"\"0\"",
+			"init",
+			"playerIndex",
+			"outputshow",
+			"gui",
+			"ip",
+			"port",
+			"osc",
+			"ip",
+			"osc",
+			"player",
+			"neckpiece",
+			"timer()",
+			"title()",
+			"timtle()",
+			"timer",
+			"delay",
+			"runled",
+			"init",
+			"playerInit",
+			"spCoun",
+			"triggerSkillE",
+			"roundEn",
+			"game over",
+			"end",
+			"trigger",
+			"start",
+			"svg",
+			"lifebar",
+			"displaygui",
+			"player",
+			"sp",
+			"triggerAttackSound",
+			"battleAnim",
+			"special",
+			"weapons",
+			"loadweapon",
+			"initPla",
+			"TIMER",
+			"skillpower",
+			"frameCount",
+			"fc",
+			"weaponid",
+			"attack",
+			"weaponSelect",
+			"wpsel",
+			"selectweapon",
+			"hitsound",
+			"triggerSkillE",
+			"Ani",
+			"displayeffects",
+			"battle()",
+			"start",
+			"press any",
+			"effect",
+			"BATTLE_ANIM",
+			"battleanim",
+			"BATTLE_RESULT_TIMER",
+			"battleanim",
+			"fadeinbattle",
+			"animation",
+			"displayEffects",
+			"trigger",
+			"sound",
+			"Screen",
+			"sound",
+			"timer =",
+			"timer",
+			"init",
+			"player",
+			"skill",
+			"skilltestSound",
+			"shoulder",
+			"oscp5",
+			"getweapon",
+			"gamestate",
+			"osc",
+			"framecount",
+			"LEDsetup",
+			"getplayers",
+			"oscController",
+			"1024",
+			"skilltest",
+			"displayplayer",
+			"life",
+			"displayPlayer",
+			"WPSEL",
+			"attacking",
+			"battleSystem",
+			"draw",
+			"got i",
+			"dopattern",
+			"display",
+			"SHOULDER",
+			"defensive",
+			"weapon",
+			"init",
+			"initi",
+			"second",
+			"println",
+			"dama",
+			"preskill",
+			"fadeInResult",
+			"draw",
+			"battle()",
+			"battleresult",
+			"skillbar",
+			"get",
+			"textconsole",
+			"preskill",
+			"fadeinpreskill",
+			"expo",
+			"fadeInWpSel",
+			"flash",
+			"skillTest()",
+			"skillTest",
+			"fadeInSKill",
+			"fadeinskill",
+			"resetTimerAni",
+			"timerszani",
+			"timer()"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"outputWipe(_weapon)",
+			"",
+			"outputShow",
+			"outputWipe",
+			"outputLitLEDNum",
+			"outputBlob",
+			"outputLEDNum"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "BattleSystemConstants.pde",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6130,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1155,
+								1155
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Processing/Syntaxes/Processing.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 45
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 570.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "avaTrix_noScreen.pde",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2993,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2802,
+								2802
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Processing/Syntaxes/Processing.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 19
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 648.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "OSCView.pde",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8451,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1707,
+								1707
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Processing/Syntaxes/Processing.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"vintage":
+							{
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 0
+							}
+						},
+						"translation.x": 202.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "OSCLED.pde",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14344,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1804,
+								1804
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Processing/Syntaxes/Processing.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"_vintageous_non_interactive": false,
+								"_vintageous_processing_notation": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 22
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 855.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Player.pde",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7892,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3393,
+								3393
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Processing/Syntaxes/Processing.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 4
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 4959.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Weapon.pde",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6360,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4469,
+								4469
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Processing/Syntaxes/Processing.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"vintage":
+							{
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 4
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 4845.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"file": "BattleSystem.pde",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16832,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								634,
+								634
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Processing/Syntaxes/Processing.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 50
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 399.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 66.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.43984962406,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.astyle_error_message":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 148.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Processing/Build Systems/Processing.sublime-build",
+	"project": "avaTrix.sublime-project",
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ava",
+				"avaTrix.pde"
+			],
+			[
+				"a",
+				"avaTrix.pde"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"_vintageous_last_buffer_search": "address",
+		"_vintageous_last_buffer_search_command": "vi_slash",
+		"_vintageous_last_char_search_command": "vi_f",
+		"_vintageous_last_character_search": "a",
+		"_vintageous_reset_during_init": true,
+		"vintage":
+		{
+			"_cmdline_cd": "/mnt/data/data/projects/avaTrix_noScreen"
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 191.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
