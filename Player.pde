@@ -29,7 +29,8 @@ class BasicPlayer implements BattleSystemConstants {
 
 	// bonus can be set by doing well on skilltest
 	boolean usingSp = false;
-	int spCount = 1;
+	int spCount = 0;
+	float spBar = 0.0;
 
 	// store how many skilltest they have won
 	int skilltestWins;
@@ -71,7 +72,6 @@ class BasicPlayer implements BattleSystemConstants {
 		hitPoints = FULL_HEALTH;
 		spCount = 1;
 		for(BasicWeapon weapon : weapons) weapon.init();
-		selectedWeapon = null;
 	}
 
 
@@ -125,14 +125,27 @@ class BasicPlayer implements BattleSystemConstants {
 		if(gsrMaster < 0) gsrProcessedBuffer = arrayPush(gsrMaster, gsrProcessedBuffer); //only the greater than average values matter, shove the lesser than values down quick
 		else gsrProcessedBuffer = arrayPush(gsrMaster, gsrProcessedBuffer);               //array for determining an average GSR over time
 		float gsrAv = arrayAverage(gsrProcessedBuffer);        
-		gsrMastered = gsrMaster - gsrAv;//Turn this all into a nice, easy value from 0 to 15   
-		println("Player " + name + " gsr value is: " + (gsrMastered * 1000));
+		gsrMastered = gsrMaster - gsrAv;   
 	}
+
+
 	
 	public float getGSR() {
 		float mapped = constrain(gsrMastered,-1.0,1.0);
-		println("Player " + name + " mapped gsr value is: " + mapped);
+		// println("Player " + name + " mapped gsr value is: " + mapped);
 		return mapped;
+	}
+
+	public void pushSkill(float amt){
+		setSkill(getSkill() + amt);
+	}
+
+	public void updateSpecial() {
+		if (getGSR()>0) {
+			setSpBar(spBar+F_SPECIAL_INC_EXTRA);
+		}else {
+			setSpBar(spBar+F_SPECIAL_INC);
+		}
 	}
 
 
@@ -216,6 +229,11 @@ class BasicPlayer implements BattleSystemConstants {
 		return selectedWeapon;
 	}
 
+	private void addSpUse() {
+		spCount += 1;
+		//TriggerSound and Lighting for SpUse
+	}
+
 
 	/////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////MODIFIERS////////////////////////////////////
@@ -230,8 +248,19 @@ class BasicPlayer implements BattleSystemConstants {
 	public void setSkill(float _f){
 		skillTestValue = _f;
 		skillTestValue = constrain(skillTestValue,0.001,1.0);
+	}
 
+	public void setSpBar(float _f){
+		spBar = _f;
+		spBar = constrain(spBar,0.0000000000000001,1.0);
+		if (spBar == 1.0) {
+			addSpUse();
+			spBar = 0.0;
+		}
+	}
 
+	public float getSpBar(){
+		return spBar;
 	}
 
 	public void setIPaddr(String _ip, int _port){
@@ -258,6 +287,16 @@ class BasicPlayer implements BattleSystemConstants {
 		return getSelectedWeapon().getAttackStrength();
 	}
 
+	public float getDefenseStrengthN(){
+		if(getSelectedWeapon() == null) return 0.0;
+		return (float)getSelectedWeapon().getDefenseStrength() / (float)MAX_DEF_PW;
+	}
+
+	public float getAttackStrengthN(){
+		if(getSelectedWeapon() == null) return 0.0;
+		return (float)getSelectedWeapon().getAttackStrength() / (float)MAX_ATT_PW;
+	}
+
 
 	public boolean isAlive(){
 		return (hitPoints > 0);
@@ -279,10 +318,6 @@ class BasicPlayer implements BattleSystemConstants {
 		return skilltestWins;
 	}
 
-	/**
-	 * Returns if the weapon's loading process is complete.
-	 * @return float a unit interval representing the progress of loading.
-	 */
 	public float getHealth(){
 		return float(getHitPoints())/float(FULL_HEALTH);
 	}

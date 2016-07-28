@@ -31,6 +31,10 @@ void LEDsetup() {
   patterns.put("knight", new knight());
   patterns.put("skillPower", new skillPower());
   patterns.put("specialPower", new specialPower());
+  patterns.put("healthBar", new healthBar());
+  patterns.put("weaponAttack", new weaponAttack());
+  patterns.put("weaponDefense", new weaponDefense());
+  patterns.put("GSR", new GSR());
 }
 
 //////////////////////////CLASSES/////////////////////////////////////
@@ -62,17 +66,17 @@ class pattern implements BattleSystemConstants {
   }
   void outputShow(BasicPlayer _pl, int _address) {// send the blob out to xOSC, this function is inherited by all the kids
     if (USE_COSTUMES) {
-      OscMessage myMessage = new OscMessage("/p" + (_pl.playerIndex+1) + "/outputs/rgb/" + _address); //address pattern
+      OscMessage myMessage = new OscMessage("/p" + (_pl.playerIndex + 1) + "/outputs/rgb/" + _address); //address pattern
       myMessage.add(outputBlob); //puts blob into message
       // println(outputBlob);
-      NetAddress myRemoteLocation = new NetAddress(_pl.ip,_pl.port);
+      NetAddress myRemoteLocation = new NetAddress(_pl.ip, _pl.port);
       // println("myIp: " + _pl.ip + " " + _pl.port); //FOR DEBUG
       oscP5.send(myMessage, myRemoteLocation);
     }
     if (USE_PD_MON) {
-      OscMessage myMessage = new OscMessage("/"+_pl.playerIndex+"/outputs/rgb/" + _address); //address pattern
+      OscMessage myMessage = new OscMessage("/" + _pl.playerIndex + "/outputs/rgb/" + _address); //address pattern
       myMessage.add(outputBlob); //puts blob into message
-      NetAddress myRemoteLocation = new NetAddress(PD_MON_IP,PD_MON_PORT);
+      NetAddress myRemoteLocation = new NetAddress(PD_MON_IP, PD_MON_PORT);
       //println(' myMessage: '+myMessage); //FOR DEBUG
       oscP5.send(myMessage, myRemoteLocation);
     }
@@ -149,10 +153,10 @@ public class fire extends pattern {
     counter += 1;
     if ((counter / 2) % 2 == 0) {
       flame.c1 = c1;
-      flame.doPattern(levels, _player, address,fc,bs); //runs super class which is solidPattern
+      flame.doPattern(levels, _player, address, fc, bs); //runs super class which is solidPattern
     } else {
       flicker.c1 = c2;
-      flicker.doPattern(levels, _player, address,fc,bs);
+      flicker.doPattern(levels, _player, address, fc, bs);
     }
     outputShow(_player, address);
   }
@@ -163,7 +167,7 @@ public class fire extends pattern {
 public class fadeInOut extends pattern {
   double intensity = 0.0;
   void doPattern(int levels, BasicPlayer _player, int address, int fc, BattleSystem bs) {   //this one is emtpy cause the kids will fill it in
-    intensity = (sin((frameCount%360) * .5) + 1 ) / 2.0;
+    intensity = (sin((frameCount % 360) * .5) + 1 ) / 2.0;
     outputWipe();
     for (int i = 0; i < levels * 3; i = i + 3) {
       outputBlob[i] = byte((int)(c1.R * intensity));
@@ -231,7 +235,7 @@ public class fadeOut extends pattern { //In a pulse
       // intensity = (sin((frameCount*(i/3))*.2) + 1 )/2.0;
       // intensity = ((sin((frameCount+(i/3)))*.2) + 1 )/2.0;
       // intensity = ((sin(frameCount)/100*i) + 1 )/2.0;
-      intensity = constrain(map(bs.timer, 0, 10000, -10, 0.5),0,1);
+      intensity = constrain(map(bs.timer, 0, 10000, -10, 0.5), 0, 1);
       // println(intensity);
       // intensity = 0.0;
       outputBlob[i] = byte((int)(c1.R * intensity));
@@ -254,7 +258,7 @@ public class attackOK extends pattern { //In a pulse
       // intensity = (sin((frameCount*(i/3))*.2) + 1 )/2.0;
       // intensity = ((sin((frameCount+(i/3)))*.2) + 1 )/2.0;
       // intensity = ((sin(frameCount)/100*i) + 1 )/2.0;
-      intensity = constrain(map(bs.timer, 0, 10000, 0.1, 10),0,1);
+      intensity = constrain(map(bs.timer, 0, 10000, 0.1, 10), 0, 1);
       // intensity = 0.0;
       outputBlob[i] = byte((int)(c1.R * intensity));
       outputBlob[i + 1] = byte((int)(c1.G * intensity));
@@ -293,7 +297,7 @@ public class flameString extends pattern { //In a pulse
 
 public class skillPower extends pattern {
   //
-  void doPattern(int levels, BasicPlayer _player, int address, int fc, BattleSystem bs) {  
+  void doPattern(int levels, BasicPlayer _player, int address, int fc, BattleSystem bs) {
     outputWipe();
     for (int i = 0; i < levels * 3; i = i + 3) {
       outputBlob[i]     = byte((int)((_player.playerIndex == 0 ? 255 : 0) * _player.getSkill()));
@@ -308,14 +312,14 @@ public class skillPower extends pattern {
 
 public class specialPower extends pattern {
   //
-  void doPattern(int levels, BasicPlayer _player, int address, int fc, BattleSystem bs) {  
+  void doPattern(int levels, BasicPlayer _player, int address, int fc, BattleSystem bs) {
     outputWipe();
     for (int i = 0; i < levels * 3; i = i + 3) {
-        if (int(random(1, 10))%2 ==0) {
-          outputBlob[i] = byte((int)c1.R);
-          outputBlob[i+1] = byte((int)c1.G);
-          outputBlob[i+2] = byte((int)c1.B);
-        }
+      if (int(random(1, 10)) % 2 == 0) {
+        outputBlob[i] = byte((int)c1.R);
+        outputBlob[i + 1] = byte((int)c1.G);
+        outputBlob[i + 2] = byte((int)c1.B);
+      }
     }
     outputShow(_player, address);
   }
@@ -378,6 +382,110 @@ public class knight extends pattern { //Knight rider
             }
           }
         }
+      }
+    }
+    outputShow(_player, address);
+  }
+}
+
+///////////////////////////////////////////////////////////////
+
+public class healthBar extends pattern {
+  //
+  void doPattern(int levels, BasicPlayer _player, int address, int fc, BattleSystem bs) {
+    int lightThreshold = ceil(_player.getHealth() * (levels * 3));
+    outputWipe();
+    for (int i = 0; i < levels * 3; i = i + 3) {
+      if (i < lightThreshold) {
+        outputBlob[i] = byte((int)c1.R);
+        outputBlob[i + 1] = byte((int)c1.G);
+        outputBlob[i + 2] = byte((int)c1.B);
+      } else {
+        outputBlob[i] = byte((int)0);
+        outputBlob[i + 1] = byte((int)0);
+        outputBlob[i + 2] = byte((int)0);
+      }
+    }
+    outputShow(_player, address);
+  }
+}
+
+////////////////////////////////////////////////////////////////
+
+public class weaponAttack extends pattern {
+
+  void doPattern(int levels, BasicPlayer _player, int address, int fc, BattleSystem bs) {
+    outputWipe();
+    if (_player.getSelectedWeapon()==null) {
+      for (int i = 0; i < levels * 3; i = i + 3) {
+          outputBlob[i] = byte((int)c1.R);
+          outputBlob[i + 1] = byte((int)c1.G);
+          outputBlob[i + 2] = byte((int)c1.B);
+      }
+    } else {
+      int lightThreshold = ceil((_player.getAttackStrengthN()) * (levels * 3));
+      println(_player.getAttackStrengthN());
+      for (int i = 0; i < levels * 3; i = i + 3) {
+        if (i < lightThreshold) {
+          outputBlob[i] = byte((int)c1.R);
+          outputBlob[i + 1] = byte((int)c1.G);
+          outputBlob[i + 2] = byte((int)c1.B);
+        } else {
+          outputBlob[i] = byte((int)0);
+          outputBlob[i + 1] = byte((int)0);
+          outputBlob[i + 2] = byte((int)0);
+        }
+      }
+    }
+    outputShow(_player, address);
+  }
+}
+
+////////////////////////////////////////////////////////////////
+
+public class weaponDefense extends pattern {
+
+  void doPattern(int levels, BasicPlayer _player, int address, int fc, BattleSystem bs) {
+    outputWipe();
+    if (_player.getSelectedWeapon()==null) {
+      for (int i = 0; i < levels * 3; i = i + 3) {
+          outputBlob[i] = byte((int)c1.R);
+          outputBlob[i + 1] = byte((int)c1.G);
+          outputBlob[i + 2] = byte((int)c1.B);
+      }
+    } else {
+      int lightThreshold = ceil((_player.getDefenseStrengthN()) * (levels * 3));
+      for (int i = 0; i < levels * 3; i = i + 3) {
+        if (i < lightThreshold) {
+          outputBlob[i] = byte((int)c1.R);
+          outputBlob[i + 1] = byte((int)c1.G);
+          outputBlob[i + 2] = byte((int)c1.B);
+        } else {
+          outputBlob[i] = byte((int)0);
+          outputBlob[i + 1] = byte((int)0);
+          outputBlob[i + 2] = byte((int)0);
+        }
+      }
+    }
+    outputShow(_player, address);
+  }
+}
+
+////////////////////////////////////////////////////////////////
+
+public class GSR extends pattern {
+  void doPattern(int levels, BasicPlayer _player, int address, int fc, BattleSystem bs) {
+    int lightThreshold = ceil(_player.getSpBar() * (levels * 3));
+    outputWipe();
+    for (int i = 0; i < levels * 3; i = i + 3) {
+      if (i < lightThreshold) {
+        outputBlob[i] = byte((int)c1.R);
+        outputBlob[i + 1] = byte((int)c1.G);
+        outputBlob[i + 2] = byte((int)c1.B);
+      } else {
+        outputBlob[i] = byte((int)0);
+        outputBlob[i + 1] = byte((int)0);
+        outputBlob[i + 2] = byte((int)0);
       }
     }
     outputShow(_player, address);

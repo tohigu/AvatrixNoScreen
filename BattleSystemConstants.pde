@@ -41,7 +41,7 @@ public interface BattleSystemConstants {
 	final int PD_MON_PORT = 5555;
 	final boolean USE_PD_MON = false;
 	final boolean USE_COSTUMES = true;
-	final boolean USE_SCREEN = false;
+	final boolean USE_SCREEN = true;
 
 	// XOSC
 
@@ -50,6 +50,16 @@ public interface BattleSystemConstants {
 	final int XOSC_P1_PORT = 9000;
 	final String XOSC_P2_IP = "172.30.130.15";
 	final int XOSC_P2_PORT = 9000;
+
+
+	// VARS
+
+	final float F_SKILL_ENERGY = 0.07;
+	final float F_SPECIAL_INC_EXTRA = 0.001;
+	final float F_SPECIAL_INC = 0.00001;
+
+	final int  MAX_ATT_PW = 63;
+	final int  MAX_DEF_PW = 63;
 
 
 /*
@@ -126,71 +136,71 @@ public interface BattleSystemConstants {
 	// final String SHOULDERPAD_ICON = "data/graphics/shoulderpad_icon.svg";
 	final String SHOULDERPAD_ICON = "data/graphics/placeholder.svg";
 	final int SHOULDERPAD_LOADING_TIME = 2000;
-	final int SHOULDERPAD_DEFENSE_STRENGTH = 3;
-	final int SHOULDERPAD_ATTACK_STRENGTH = 8;
+	final int SHOULDERPAD_DEFENSE_STRENGTH = 12;
+	final int SHOULDERPAD_ATTACK_STRENGTH = 38;
 	final int SHOULDERPAD_MAXUSE = 2;
 
 	// final String FOXMASK_ICON = "data/graphics/foxmask_icon.svg";
 	final String FOXMASK_ICON = "data/graphics/placeholder.svg";
 	final int FOXMASK_LOADING_TIME = 2000;
-	final int FOXMASK_DEFENSE_STRENGTH = 10;
-	final int FOXMASK_ATTACK_STRENGTH = 7;
+	final int FOXMASK_DEFENSE_STRENGTH = 40;
+	final int FOXMASK_ATTACK_STRENGTH = 35;
 	final int FOXMASK_MAXUSE = 2;
 
 	// final String PENDANT_ICON = "data/graphics/pendant_icon.svg";
 	final String PENDANT_ICON = "data/graphics/placeholder.svg";
 	final int PENDANT_LOADING_TIME = 2000;
-	final int PENDANT_DEFENSE_STRENGTH = 7;
-	final int PENDANT_ATTACK_STRENGTH = 2;
+	final int PENDANT_DEFENSE_STRENGTH = 28;
+	final int PENDANT_ATTACK_STRENGTH = 9;
 	final int PENDANT_MAXUSE = 2;
 
 	// final String CLAWS_ICON = "data/graphics/claws_icon.svg";
 	final String CLAWS_ICON = "data/graphics/placeholder.svg";
 	final int CLAWS_LOADING_TIME = 2000;
-	final int CLAWS_DEFENSE_STRENGTH = 4;
-	final int CLAWS_ATTACK_STRENGTH = 4;
+	final int CLAWS_DEFENSE_STRENGTH = 16;
+	final int CLAWS_ATTACK_STRENGTH = 19;
 	final int CLAWS_MAXUSE = 2;
 //---------
 	// final String RAMHORNS_ICON = "data/graphics/ramhorns_icon.svg";
 	final String RAMHORNS_ICON = "data/graphics/placeholder.svg";
 	final int RAMHORNS_LOADING_TIME = 2000;
-	final int RAMHORNS_DEFENSE_STRENGTH = 4;
-	final int RAMHORNS_ATTACK_STRENGTH = 13;
+	final int RAMHORNS_DEFENSE_STRENGTH = 16;
+	final int RAMHORNS_ATTACK_STRENGTH = 3;
 	final int RAMHORNS_MAXUSE = 2;
 
 	// final String TAIL_ICON = "data/graphics/tail_icon.svg";
 	final String TAIL_ICON = "data/graphics/placeholder.svg";
 	final int TAIL_LOADING_TIME = 2000;
-	final int TAIL_DEFENSE_STRENGTH = 2;
-	final int TAIL_ATTACK_STRENGTH = 12;
+	final int TAIL_DEFENSE_STRENGTH = 8;
+	final int TAIL_ATTACK_STRENGTH = 58;
 	final int TAIL_MAXUSE = 2;
 
 	// final String COLLAR_ICON = "data/graphics/collar_icon.svg";
 	final String COLLAR_ICON = "data/graphics/placeholder.svg";
 	final int COLLAR_LOADING_TIME = 2000;
-	final int COLLAR_DEFENSE_STRENGTH = 4;
-	final int COLLAR_ATTACK_STRENGTH = 11;
+	final int COLLAR_DEFENSE_STRENGTH = 16;
+	final int COLLAR_ATTACK_STRENGTH = 53;
 	final int COLLAR_MAXUSE = 2;
 
 	// final String CAP_ICON = "data/graphics/cap_icon.svg";
 	final String CAP_ICON = "data/graphics/placeholder.svg";
 	final int CAP_LOADING_TIME = 2000;
-	final int CAP_DEFENSE_STRENGTH = 3;
-	final int CAP_ATTACK_STRENGTH = 8;
+	final int CAP_DEFENSE_STRENGTH = 12;
+	final int CAP_ATTACK_STRENGTH = 38;
 	final int CAP_MAXUSE = 2;
 //-----------------
 	// final String WINGS_ICON = "data/graphics/wings_icon.svg";
 	final String WINGS_ICON = "data/graphics/placeholder.svg";
 	final int WINGS_LOADING_TIME = 2000;
-	final int WINGS_DEFENSE_STRENGTH = 4;
-	final int WINGS_ATTACK_STRENGTH = 3;
+	final int WINGS_DEFENSE_STRENGTH = 12;
+	final int WINGS_ATTACK_STRENGTH = 13;
 	final int WINGS_MAXUSE = 2;
 	
 	// final String ANTLERS_ICON = "data/graphics/antlers_icon.svg";
 	final String ANTLERS_ICON = "data/graphics/placeholder.svg";
 	final int ANTLERS_LOADING_TIME = 2000;
-	final int ANTLERS_DEFENSE_STRENGTH = 3;
-	final int ANTLERS_ATTACK_STRENGTH = 7;
+	final int ANTLERS_DEFENSE_STRENGTH = 12;
+	final int ANTLERS_ATTACK_STRENGTH = 34;
 	final int ANTLERS_MAXUSE = 2;
 
 

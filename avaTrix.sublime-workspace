@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"public",
+				"public	public function"
+			],
+			[
+				"Basic",
+				"BasicPlayer"
+			],
+			[
+				"for",
+				"for	for in"
+			],
+			[
+				"publ",
+				"public	public function"
+			],
+			[
 				"gsr",
 				"gsrRawBuffer"
 			],
@@ -54,10 +70,6 @@
 			[
 				"displa",
 				"displayEffects"
-			],
-			[
-				"for",
-				"for	for"
 			],
 			[
 				"new",
@@ -152,10 +164,6 @@
 				"SKILLTEST_INTRO"
 			],
 			[
-				"Basic",
-				"BasicWeapon"
-			],
-			[
 				"out",
 				"outputBlob"
 			],
@@ -195,7 +203,7 @@
 			"file": "BattleSystemConstants.pde",
 			"settings":
 			{
-				"buffer_size": 6130,
+				"buffer_size": 6316,
 				"line_ending": "Unix"
 			}
 		},
@@ -208,18 +216,18 @@
 			}
 		},
 		{
-			"file": "OSCView.pde",
+			"file": "BattleSystem.pde",
 			"settings":
 			{
-				"buffer_size": 8451,
+				"buffer_size": 16878,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "OSCLED.pde",
+			"file": "OSCView.pde",
 			"settings":
 			{
-				"buffer_size": 14344,
+				"buffer_size": 9225,
 				"line_ending": "Unix"
 			}
 		},
@@ -227,7 +235,15 @@
 			"file": "Player.pde",
 			"settings":
 			{
-				"buffer_size": 7892,
+				"buffer_size": 8245,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "OSCLED.pde",
+			"settings":
+			{
+				"buffer_size": 16331,
 				"line_ending": "Unix"
 			}
 		},
@@ -236,14 +252,6 @@
 			"settings":
 			{
 				"buffer_size": 6360,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "BattleSystem.pde",
-			"settings":
-			{
-				"buffer_size": 16832,
 				"line_ending": "Unix"
 			}
 		}
@@ -284,9 +292,13 @@
 	"command_palette":
 	{
 		"height": 400.0,
-		"last_filter": "insta",
+		"last_filter": "list",
 		"selected_items":
 		[
+			[
+				"list",
+				"Package Control: List Packages"
+			],
 			[
 				"insta",
 				"Package Control: Install Package"
@@ -352,10 +364,6 @@
 				"Package Control: Install Package"
 			],
 			[
-				"list",
-				"Package Control: List Packages"
-			],
-			[
 				"git ini",
 				"Git: Init"
 			],
@@ -402,6 +410,10 @@
 	],
 	"file_history":
 	[
+		"/mnt/data/data/projects/avaTrix_noScreen/GUIView.pde",
+		"/mnt/data/data/projects/avaTrix_noScreen/Weapon.pde",
+		"/mnt/data/data/projects/avaTrix_noScreen/Ani 2.7 infos, feedback @ http",
+		"/home/tohigu/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
 		"/mnt/data/data/projects/avaTrix_noScreen/BattleSystem.pde",
 		"/mnt/data/data/projects/avaTrix_noScreen/### [2016/7/12 11",
 		"/mnt/data/data/projects/avaTrix_noScreen/avaTrix_noScreen.pde",
@@ -413,7 +425,6 @@
 		"/mnt/data/data/projects/avaTrix_noScreen/	at avaTrix_noScreen$OSCView.display(avaTrix_noScreen.java",
 		"/home/tohigu/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/mnt/data/data/projects/avaTrix_noScreen/Controller.pde",
-		"/mnt/data/data/projects/avaTrix_noScreen/GUIView.pde",
 		"/mnt/data/data/projects/avaTrix_noScreen/avaTrix.pde",
 		"/mnt/data/data/projects/avaTrix_noScreen/Xosc.pde",
 		"/mnt/0828599B4A1AFB83/data/projects/avaTrix/BattleSystemConstants.pde",
@@ -436,7 +447,6 @@
 		"/mnt/0828599B4A1AFB83/data/projects/avaTrix/[cmd",
 		"/mnt/0828599B4A1AFB83/data/projects/avaTrix/BasicView.pde",
 		"/mnt/0828599B4A1AFB83/data/projects/avaTrix/Listening for transport dt_socket at address",
-		"/home/tohigu/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
 		"/mnt/0828599B4A1AFB83/data/projects/sublime/avaTrix.sublime-project",
 		"/mnt/0828599B4A1AFB83/data/projects/OSCTest/XOSCNeoPixel/XOSCNeoPixel.pde",
 		"/mnt/0828599B4A1AFB83/data/projects/OSCTest/XOSCNeoPixel/GauntletTest.pde",
@@ -481,7 +491,7 @@
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -496,6 +506,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"health",
+			"_weapon.address);",
+			"BasicWeapon _weapon",
+			"weapon,",
+			"display",
+			"println",
 			"pattern",
 			"battle()",
 			"max",
@@ -617,13 +633,7 @@
 			"expo",
 			"fadeInWpSel",
 			"flash",
-			"skillTest()",
-			"skillTest",
-			"fadeInSKill",
-			"fadeinskill",
-			"resetTimerAni",
-			"timerszani",
-			"timer()"
+			"skillTest()"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -631,6 +641,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"address);",
+			"int address",
+			"weapon.address,",
 			"outputWipe(_weapon)",
 			"",
 			"outputShow",
@@ -657,15 +670,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6130,
+						"buffer_size": 6316,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1155,
-								1155
+								1189,
+								1189
 							]
 						],
 						"settings":
@@ -674,10 +687,10 @@
 							"translate_tabs_to_spaces": false,
 							"vintage":
 							{
-								"_vintageous_glue_until_normal_mode": false,
+								"_vintageous_glue_until_normal_mode": true,
 								"action": null,
 								"action_count": "",
-								"mode": "mode_normal",
+								"mode": "mode_insert",
 								"motion": null,
 								"motion_count": "",
 								"must_capture_register_name": false,
@@ -685,14 +698,14 @@
 								"partial_sequence": "",
 								"register": "\"",
 								"sequence": "",
-								"xpos": 45
+								"xpos": 36
 							}
 						},
 						"translation.x": 0.0,
-						"translation.y": 570.0,
+						"translation.y": 3780.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -708,8 +721,8 @@
 						"selection":
 						[
 							[
-								2802,
-								2802
+								2921,
+								2921
 							]
 						],
 						"settings":
@@ -730,52 +743,55 @@
 								"partial_sequence": "",
 								"register": "\"",
 								"sequence": "",
-								"xpos": 19
+								"xpos": 0
 							}
 						},
 						"translation.x": 0.0,
-						"translation.y": 648.0,
+						"translation.y": 1314.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "OSCView.pde",
+					"file": "BattleSystem.pde",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8451,
+						"buffer_size": 16878,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1707,
-								1707
+								15604,
+								15604
 							]
 						],
 						"settings":
 						{
+							"highlight_line": false,
 							"syntax": "Packages/Processing/Syntaxes/Processing.tmLanguage",
 							"translate_tabs_to_spaces": false,
 							"vintage":
 							{
+								"_vintageous_glue_until_normal_mode": false,
 								"action": null,
 								"action_count": "",
 								"mode": "mode_normal",
 								"motion": null,
 								"motion_count": "",
 								"must_capture_register_name": false,
+								"normal_insert_count": "1",
 								"partial_sequence": "",
 								"register": "\"",
 								"sequence": "",
-								"xpos": 0
+								"xpos": 49
 							}
 						},
-						"translation.x": 202.0,
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -784,23 +800,121 @@
 				},
 				{
 					"buffer": 3,
-					"file": "OSCLED.pde",
+					"file": "OSCView.pde",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 14344,
+						"buffer_size": 9225,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1804,
-								1804
+								7139,
+								6806
 							]
 						],
 						"settings":
 						{
+							"syntax": "Packages/Processing/Syntaxes/Processing.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 21
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 2169.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "Player.pde",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8245,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5866,
+								5866
+							]
+						],
+						"settings":
+						{
+							"highlight_line": false,
+							"syntax": "Packages/Processing/Syntaxes/Processing.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"_vintageous_non_interactive": false,
+								"_vintageous_processing_notation": false,
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 14
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 5052.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "OSCLED.pde",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16331,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								15730,
+								15730
+							]
+						],
+						"settings":
+						{
+							"highlight_line": false,
 							"syntax": "Packages/Processing/Syntaxes/Processing.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true,
@@ -819,62 +933,18 @@
 								"partial_sequence": "",
 								"register": "\"",
 								"sequence": "",
-								"xpos": 22
+								"xpos": 51
 							}
 						},
 						"translation.x": 0.0,
-						"translation.y": 855.0,
+						"translation.y": 6588.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "Player.pde",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7892,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3393,
-								3393
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Processing/Syntaxes/Processing.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"vintage":
-							{
-								"_vintageous_glue_until_normal_mode": false,
-								"action": null,
-								"action_count": "",
-								"mode": "mode_normal",
-								"motion": null,
-								"motion_count": "",
-								"must_capture_register_name": false,
-								"normal_insert_count": "1",
-								"partial_sequence": "",
-								"register": "\"",
-								"sequence": "",
-								"xpos": 4
-							}
-						},
-						"translation.x": 0.0,
-						"translation.y": 4959.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "Weapon.pde",
 					"semi_transient": false,
 					"settings":
@@ -886,8 +956,8 @@
 						"selection":
 						[
 							[
-								4469,
-								4469
+								2593,
+								2593
 							]
 						],
 						"settings":
@@ -909,57 +979,7 @@
 							}
 						},
 						"translation.x": 0.0,
-						"translation.y": 4845.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 6,
-					"file": "BattleSystem.pde",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 16832,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								634,
-								634
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Processing/Syntaxes/Processing.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"vintage":
-							{
-								"_vintageous_glue_until_normal_mode": false,
-								"action": null,
-								"action_count": "",
-								"mode": "mode_normal",
-								"motion": null,
-								"motion_count": "",
-								"must_capture_register_name": false,
-								"normal_insert_count": "1",
-								"partial_sequence": "",
-								"register": "\"",
-								"sequence": "",
-								"xpos": 50
-							}
-						},
-						"translation.x": 0.0,
-						"translation.y": 399.0,
+						"translation.y": 1602.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 5,
@@ -996,7 +1016,7 @@
 		"cols":
 		[
 			0.0,
-			0.43984962406,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -1012,7 +1032,7 @@
 	},
 	"output.exec":
 	{
-		"height": 148.0
+		"height": 26.0
 	},
 	"output.find_results":
 	{
@@ -1022,7 +1042,7 @@
 	"project": "avaTrix.sublime-project",
 	"replace":
 	{
-		"height": 72.0
+		"height": 74.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1063,10 +1083,10 @@
 	"selected_group": 0,
 	"settings":
 	{
-		"_vintageous_last_buffer_search": "address",
+		"_vintageous_last_buffer_search": "gsr value",
 		"_vintageous_last_buffer_search_command": "vi_slash",
-		"_vintageous_last_char_search_command": "vi_f",
-		"_vintageous_last_character_search": "a",
+		"_vintageous_last_char_search_command": "vi_t",
+		"_vintageous_last_character_search": "l",
 		"_vintageous_reset_during_init": true,
 		"vintage":
 		{
@@ -1077,7 +1097,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 191.0,
+	"side_bar_width": 159.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

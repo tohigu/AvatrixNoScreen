@@ -142,6 +142,7 @@ class BattleSystem implements BattleSystemConstants {
 		textConsole = gameOverText + "\nPress X to start the Skill Test";
 		gameState = PRE_SKILLTEST;
 		statelock = false;
+		updateSpecials();
 
 	}
 
@@ -161,6 +162,11 @@ class BattleSystem implements BattleSystemConstants {
 		if (timer > 0) {
 			players[0].setSkill(players[0].getSkill() - 0.01);
 			players[1].setSkill(players[1].getSkill() - 0.01);
+			for (BasicPlayer p : players) {
+				if (p.getGSR()>0) {
+					p.pushSkill(F_SKILL_ENERGY);
+				}
+			}
 			timer -= timeDelta;
 			return;
 		} else {
@@ -223,6 +229,7 @@ class BattleSystem implements BattleSystemConstants {
 	void weaponSelect() {
 		textConsole = "Choose your weapons!";
 		if (timer > 0) {
+			updateSpecials();
 			timer -= timeDelta;
 			return;
 
@@ -393,6 +400,7 @@ class BattleSystem implements BattleSystemConstants {
 		//Special Power in effect
 		if (battleResult[3] == 1 || battleResult[4] == 1) {
 			if (timer > 0) {
+				updateSpecials();
 				timer -= timeDelta;
 			} else {
 				timer = BATTLE_ANIM_TIMER;
@@ -401,6 +409,7 @@ class BattleSystem implements BattleSystemConstants {
 			}
 		} else {
 			if (timer > 0) {
+				updateSpecials();
 				timer -= timeDelta;
 			} else {
 				timer = BATTLE_ANIM_TIMER;
@@ -413,6 +422,7 @@ class BattleSystem implements BattleSystemConstants {
 	public void battleAnim() {
 		//Special Power in effect
 		if (timer > 0) {
+				updateSpecials();
 				timer -= timeDelta;
 		} else {
 				timer = BATTLE_RESULT_TIMER;
@@ -424,6 +434,7 @@ class BattleSystem implements BattleSystemConstants {
 
 	public void battleResult() {
 		if (timer > 0) {
+			updateSpecials();
 			if (roundEndsGame) {
 				// println(players[0].getHitPoints() + " " + players[1].getHitPoints() );
 				// if(players[0].getHitPoints() > players[1].getHitPoints()){
@@ -433,9 +444,7 @@ class BattleSystem implements BattleSystemConstants {
 				// }else if(players[0].getHitPoints() == players[1].getHitPoints()){
 				// 	gameOverText = "It's a Draw!\nGame Over";
 				// }
-
 				newGame = true;
-
 			}
 			textConsole = bufferText;
 			timer -= timeDelta;
@@ -461,26 +470,26 @@ class BattleSystem implements BattleSystemConstants {
 		newGame = true;
 		battleResult();
 	}
-	// public void gameOver(){
-	// 	textConsole = "Game Over\n";
-	// 	if(players[0].hitPoints > players[1].hitPoints){
-	// 		textConsole += players[0].name + " defeats " + players[1].name + "!\n";
-	// 	}else if(players[0].hitPoints == players[1].hitPoints){
-	// 		textConsole += "It's a Draw!\n";
-	// 	}else{
-	// 		textConsole += players[1].name + " defeats " + players[0].name + "!\n";
-	// 	}
-	// 	textConsole += "Press ENTER to restart.\n";
-	// 	if (key == ENTER) {
-	// 		for (BasicPlayer player : players) {
-	// 			player.init();
-	// 		}
-	// 		startSkillTest();
-	// 	}
 
-	// }
+	/////////////
+	//
+	// Helpers
+	//
+	//////////////
 
-	// Fades
+	private void updateSpecials() {
+		for (BasicPlayer p : players) {
+			p.updateSpecial();
+		}
+	}
+
+
+	/////////////////////
+	//
+	// Animation
+	//
+	///////////////////////
+
 	public void fadeInSKill() {
 		sceneAni = new Ani(this, 1, "fadeLvl", 0, Ani.EXPO_IN_OUT, "onStart:startSkillTest");
 	}
@@ -542,7 +551,7 @@ class BattleSystem implements BattleSystemConstants {
 
 			} else if (gameState == SKILLTEST && _i == 3) {
 
-				// _player.setSkill(_player.getSkill() + 0.07);
+				_player.pushSkill(F_SKILL_ENERGY);
 
 			} else if (gameState == PRE_SKILLTEST && _i == 3 && !statelock) {
 				statelock = true;
@@ -592,15 +601,19 @@ class BattleSystem implements BattleSystemConstants {
 		// }
 		if (_mess.checkAddrPattern("/p1/inputs/analogue")) {
 			float gsrVal = _mess.get(0).floatValue();
-			println("P1:" + gsrVal);
 			players[0].updateGSR(gsrVal);
+			// println("P1:" + gsrVal);
+			// println("Player " + players[0].name + " gsr value is: " + (players[0].getGSR() * 1000));
 		} 
 		if (_mess.checkAddrPattern("/p2/inputs/analogue")) {
 			float gsrVal = _mess.get(0).floatValue();
-			println("P2:" + gsrVal);
 			players[1].updateGSR(gsrVal);
+			// println("P2:" + gsrVal);
+			// println("Player " + players[1].name + " gsr value is: " + (players[1].getGSR() * 1000));
 		} 
 	}
+
+
 
 	/////////////////////////////////////////////////////////////
 	//////  Accessors
