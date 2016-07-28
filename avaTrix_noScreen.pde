@@ -18,7 +18,7 @@ SoundPlayer audioPlayer;
 
 
 // set if the sketch is fullscreen by default
-boolean USE_SCREEN = false;
+boolean USE_SCREEN = true;
 boolean fullscreen = false;
 
 // default window size if not fullscreen

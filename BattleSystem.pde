@@ -38,7 +38,38 @@ class BattleSystem implements BattleSystemConstants {
 	boolean triggerDamageSound = false;
 	boolean triggerDefenseSound = false;
 	boolean triggerGameOverSound = false;
-	int winner = 0;
+  //
+  boolean triggerSPT_LudicSound = false;
+  boolean triggerSPT_FierceSound = false;
+  boolean triggerSPF_LudicSound = false;
+  boolean triggerSPFLudicOK = false;
+  boolean triggerSPLudic = false;
+  boolean triggerSPFierce = false;
+  boolean triggerSPBothSound = false;
+  boolean triggerSPSFierceSound = false;
+  boolean triggerSPSLudicSound = false;
+  boolean triggerSTFierceSound = false;
+  boolean triggerSTLudicSound = false;
+  boolean triggerWS_ = false;
+  boolean triggerAFFierceSound = false;
+  boolean triggerAFLudicSound = false;
+  boolean triggerAFFierceOK= false;
+  boolean triggerAFLudicOK = false;
+  boolean triggerFRRFierceSound = false;
+  boolean triggerFRRLudicSound = false;
+  boolean triggerASFierceSound = false;
+  boolean triggerASLudicSound = false;
+  boolean triggerASFierceOK= false;
+  boolean triggerASLudicOK = false;
+  boolean triggerIntroOK = true;
+  boolean triggerIntro4Sound = false;
+  //
+  boolean triggerSkillResultSound = false;
+  boolean triggerWeapSelSound = false;
+  boolean triggerFirstTime = false;
+  boolean triggerResultSound = true;
+	//
+  int winner = 0;
 
 	int[] battleResult = {0, 0, 0, 0, 0, 0}; //[attackingPlayer(0-1),weaponP1(1-4),weaponP2(1-4),specialP1(0-1),specialP2(0-1),success(0-1)]
 
@@ -58,6 +89,7 @@ class BattleSystem implements BattleSystemConstants {
 		players[1].playerIndex = 1;
 		players[0].setOpponent(players[1]);
 		players[1].setOpponent(players[0]);
+    triggerFirstTime = true;
 	}
 
 	public void update() {
@@ -141,6 +173,10 @@ class BattleSystem implements BattleSystemConstants {
 
 		textConsole = gameOverText + "\nPress X to start the Skill Test";
 		gameState = PRE_SKILLTEST;
+    if (triggerIntroOK) {
+        triggerIntroOK = false;
+        triggerIntro4Sound = true;
+    }
 		statelock = false;
 		updateSpecials();
 
@@ -155,10 +191,12 @@ class BattleSystem implements BattleSystemConstants {
 		players[0].setSkill(0.00);
 		players[1].setSkill(0.00);
 		triggerSkill = true;
+    triggerSkillResultSound = true;
 	}
 
 	private void skillTest() {
 		textConsole = "TAP X!";
+    triggerResultSound=true;
 		if (timer > 0) {
 			players[0].setSkill(players[0].getSkill() - 0.01);
 			players[1].setSkill(players[1].getSkill() - 0.01);
@@ -191,6 +229,16 @@ class BattleSystem implements BattleSystemConstants {
 
 			}
 			textConsole = attackingPlayer.getName() + "  will attack  " + defendingPlayer.getName() + "\nGet ready!";
+      //SOUND : ludic or fierce win skill test
+      if (triggerSkillResultSound){
+          if (attackingPlayer.getName()=="Ludic"){
+            triggerSTLudicSound = true;
+              }
+          if (attackingPlayer.getName()=="Fierce"){
+            triggerSTFierceSound = true;
+              }
+        triggerSkillResultSound= false;
+        }
 			timer -= timeDelta;
 
 		} else {
@@ -224,10 +272,17 @@ class BattleSystem implements BattleSystemConstants {
 			timer = WPSEL_TIMER;
 			gameState = WPSEL;
 			statelock = false;
+      triggerWeapSelSound = true;
 		}
 	}
 	void weaponSelect() {
 		textConsole = "Choose your weapons!";
+   if (triggerWeapSelSound){
+        triggerWeapSelSound= false;
+        triggerWS_ = true;
+        //triggerFirstTime= false;
+        }
+
 		if (timer > 0) {
 			updateSpecials();
 			timer -= timeDelta;
@@ -299,10 +354,12 @@ class BattleSystem implements BattleSystemConstants {
 			case "Fierce" :
 				dammage += 4;
 				bufferText += ("Fierce casts Rage!\n");
-				break;
+        triggerSPFierce = true;
+        break;
 			case "Ludic" :
 				switchPlayers = true;
 				bufferText += ("Ludic casted Mirror Spell on themselves!\n");
+        triggerSPFLudicOK = true;
 				break;
 			default:
 				break;
@@ -318,7 +375,8 @@ class BattleSystem implements BattleSystemConstants {
 			case "Ludic" :
 				switchPlayers = true;
 				bufferText += ("Ludic casts Mirror Spell!\n");
-				break;
+        triggerSPLudic = true;
+        break;
 			default:
 				break;
 			}
@@ -326,18 +384,28 @@ class BattleSystem implements BattleSystemConstants {
 		}
 
 		int attackRes = dammage - defense;
+    triggerFirstTime= false;
 		battleResult[5] = attackRes > 0 ? 1 : 0;
 		triggerAttackSound = true;
 		if(battleResult[5] == 1){
 			triggerDamageSound = true;
 		}else{
 			triggerDefenseSound = true;
+      if (attackingPlayer.getName()=="Fierce"){
+      triggerAFFierceOK=true;}
+      if (attackingPlayer.getName()=="Ludic"){
+      triggerAFLudicOK=true;  
+      }
 		}
 
 		if (switchPlayers) attackingPlayer.receiveAttack(attackRes);
 		else defendingPlayer.receiveAttack(attackRes);
 
 		if (attackRes > 0) {
+      if (attackingPlayer.getName()=="Fierce"){
+          triggerASFierceOK=true;}
+      if (attackingPlayer.getName()=="Ludic"){
+          triggerASLudicOK=true;}
 			if (switchPlayers) {
 				bufferText += defendingPlayer.getName() + "  attacked  " + attackingPlayer.getName() + " for " + attackRes + " HP";
 			} else {
@@ -368,6 +436,7 @@ class BattleSystem implements BattleSystemConstants {
 			if (!player.isAlive()) {
 				roundEndsGame = true;
 				bufferText += ("\n" + player.name + " has been defeated!");
+        //
 				winner = players[0].name == player.name ? 1 : 0; 
 				return;
 			}
@@ -384,6 +453,7 @@ class BattleSystem implements BattleSystemConstants {
 		if (noWp) {
 			if(players[0].getHitPoints()>players[1].getHitPoints()){
 				bufferText += ("\n" + players[0].name + " Wins!");
+        triggerFRRLudicSound = true;
 				winner = 0;
 			} else if(players[0].getHitPoints()<players[1].getHitPoints()){
 				bufferText += ("\n" + players[1].name + " Wins!");
@@ -402,19 +472,21 @@ class BattleSystem implements BattleSystemConstants {
 			if (timer > 0) {
 				updateSpecials();
 				timer -= timeDelta;
-			} else {
+      	} else {
 				timer = BATTLE_ANIM_TIMER;
 				gameState = BATTLE_ANIMATION;
 				println(battleResult);
-			}
+             	}
 		} else {
 			if (timer > 0) {
 				updateSpecials();
 				timer -= timeDelta;
+         triggerSPF_LudicSound = true;
 			} else {
 				timer = BATTLE_ANIM_TIMER;
 				gameState = BATTLE_ANIMATION;
 				println(battleResult);
+         
 			}
 		}
 	}
@@ -427,14 +499,21 @@ class BattleSystem implements BattleSystemConstants {
 		} else {
 				timer = BATTLE_RESULT_TIMER;
 				gameState = BATTLE_RESULT;
-				if(roundEndsGame) triggerGameOverSound = true;
+				if(roundEndsGame) {
+           triggerGameOverSound = true;
+           if(players[0].getHitPoints()<players[1].getHitPoints())
+              triggerFRRLudicSound = true;
+           if(players[0].getHitPoints()>players[1].getHitPoints())
+              triggerFRRFierceSound = true;}
 				println(battleResult);
+
 		}
 	}
 
 	public void battleResult() {
 		if (timer > 0) {
 			updateSpecials();
+
 			if (roundEndsGame) {
 				// println(players[0].getHitPoints() + " " + players[1].getHitPoints() );
 				// if(players[0].getHitPoints() > players[1].getHitPoints()){
@@ -447,6 +526,55 @@ class BattleSystem implements BattleSystemConstants {
 				newGame = true;
 			}
 			textConsole = bufferText;
+
+          //I know it's the worst way ... sorry
+ if (triggerResultSound){
+   triggerResultSound=false;
+   if((players[0].getHitPoints()>0) && (players[1].getHitPoints()>0)) {
+     if(players[0].getHitPoints()>players[1].getHitPoints()){
+        triggerIntroOK = true;
+        if (triggerSPFLudicOK) {
+            triggerSPFLudicOK=false;
+            triggerSPF_LudicSound =true;           
+          }
+        if (triggerSPLudic) {
+           if (triggerSPFierce) {
+               triggerSPFierce=false;
+               triggerSPLudic=false;
+               triggerSPBothSound =true;           
+           } else {
+               triggerSPLudic=false;
+               triggerSPSLudicSound=true;  }          
+        } else {
+            if (triggerSPFierce) {
+              triggerSPFierce=false;
+              triggerSPSFierceSound =true;           
+           } else { 
+               if (triggerAFLudicOK) {
+                   triggerAFLudicOK=false;
+                   triggerAFLudicSound =true;  
+              } else {
+                  if (triggerAFFierceOK) {
+                      triggerAFFierceOK=false;
+                      triggerAFFierceSound =true;  
+                 } else {
+                     if (triggerASFierceOK) {
+                         triggerASFierceOK=false;
+                         triggerASFierceSound =true;  
+                   } else {
+                       if (triggerASLudicOK) {
+                           triggerASLudicOK=false;
+                           triggerASLudicSound =true; }
+                                           }
+                                }
+                      }
+
+                }
+             } 
+    }
+   }
+ }
+          //
 			timer -= timeDelta;
 		} else {
 			//Then go to PreSkill Screen
@@ -537,6 +665,12 @@ class BattleSystem implements BattleSystemConstants {
 
 					if (_player.specialPower()) {
 						triggerSpSound = true;
+            if (_p == 1) { 
+                triggerSPT_LudicSound = true;
+            }
+            if (_p == 0) { 
+                triggerSPT_FierceSound = true;
+            }
 						triggerSpAniSound = true;
 					}
 				} else if (_i == 1) {

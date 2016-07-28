@@ -92,8 +92,8 @@ public interface BattleSystemConstants {
 
 	/****** TIMER ******/
 	final int SKILLTEST_TIMER = 3000;
-	final int START_BATTLE_TIMER = 4000;
-	final int WPSEL_TIMER = 15000;
+	final int START_BATTLE_TIMER = 3000;
+	final int WPSEL_TIMER = 14000;
 	final int SP_ANIM_TIMER = 2000;
 	final int BATTLE_ANIM_TIMER = 2000;
 	final int BATTLE_RESULT_TIMER = 8000;
@@ -110,7 +110,7 @@ public interface BattleSystemConstants {
 	// 	color(22, 233, 12)};
 	
 	// full health value
-	final int FULL_HEALTH = 100;
+	final int FULL_HEALTH = 30;
 	final int HEALTHBAR_WIDTH = 400;
 	final int HEALTHBAR_HEIGHT = SMALL_FONT_SIZE + 4;
 	final float HEALTHBAR_RATIO = HEALTHBAR_WIDTH / FULL_HEALTH;
