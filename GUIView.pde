@@ -477,4 +477,3 @@ class GUIWeaponView extends WeaponView{
 	}
 
 }
-

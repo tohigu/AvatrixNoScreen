@@ -40,8 +40,8 @@ public interface BattleSystemConstants {
 	final String PD_MON_IP = "127.0.0.1";
 	final int PD_MON_PORT = 5555;
 	final boolean USE_PD_MON = false;
-	final boolean USE_COSTUMES = true;
-	final boolean USE_SCREEN = false;
+	final boolean USE_COSTUMES = false;
+	final boolean USE_SCREEN = true;
 
 	// XOSC
 
@@ -82,8 +82,8 @@ public interface BattleSystemConstants {
 
 	/****** TIMER ******/
 	final int SKILLTEST_TIMER = 3000;
-	final int START_BATTLE_TIMER = 4000;
-	final int WPSEL_TIMER = 15000;
+	final int START_BATTLE_TIMER = 3000;
+	final int WPSEL_TIMER = 14000;
 	final int SP_ANIM_TIMER = 2000;
 	final int BATTLE_ANIM_TIMER = 2000;
 	final int BATTLE_RESULT_TIMER = 8000;
@@ -100,7 +100,7 @@ public interface BattleSystemConstants {
 	// 	color(22, 233, 12)};
 	
 	// full health value
-	final int FULL_HEALTH = 100;
+	final int FULL_HEALTH = 30;
 	final int HEALTHBAR_WIDTH = 400;
 	final int HEALTHBAR_HEIGHT = SMALL_FONT_SIZE + 4;
 	final float HEALTHBAR_RATIO = HEALTHBAR_WIDTH / FULL_HEALTH;
@@ -155,7 +155,7 @@ public interface BattleSystemConstants {
 	final String RAMHORNS_ICON = "data/graphics/placeholder.svg";
 	final int RAMHORNS_LOADING_TIME = 2000;
 	final int RAMHORNS_DEFENSE_STRENGTH = 4;
-	final int RAMHORNS_ATTACK_STRENGTH = 13;
+	final int RAMHORNS_ATTACK_STRENGTH = 23;
 	final int RAMHORNS_MAXUSE = 2;
 
 	// final String TAIL_ICON = "data/graphics/tail_icon.svg";
